@@ -8,6 +8,7 @@ var clients = [];
 var file;
 
 const wss = new WebSocket.Server({ port: process.env.PORT });
+console.log(process.env.PORT);
 
 wss.on('connection', function connection(ws) {
   fs.readFile("chat.txt", function (err, data) {
